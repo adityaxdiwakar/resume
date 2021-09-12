@@ -2,7 +2,7 @@ name: Compile and Deploy
 on: [push]
 jobs:
   build:
-    runs-on: unbtun-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Set up Git Repo
         uses: actions/checkout@v2
