@@ -86,7 +86,8 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,
+    label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -100,7 +101,8 @@
 \vspace{-5pt}
 \begin{center}
     \textbf{\Huge \scshape Aditya Diwakar} \\ \vspace{1pt}
-    \small 470-302-9648 $|$ \href{mailto:aditya@diwakar.io}{\underline{aditya@diwakar.io}} $|$ 
+    \small 470-302-9648 $|$
+    \href{mailto:aditya@diwakar.io}{\underline{aditya@diwakar.io}} $|$ 
     \href{https://linkedin.com/in/adityadiwakar}{\underline{linkedin.com/in/adityadiwakar}} $|$
     \href{https://github.com/adityaxdiwakar}{\underline{github.com/adityaxdiwakar}}
 \end{center}
@@ -127,8 +129,10 @@
       {South Forsyth High School}{Cumming, GA}
       {High School Diploma}{}
       \resumeItemListStart
-            \resumeItem{Graduated with 4.66/4.0 GPA winning 32 Regional and 2 National Awards for AI Usage in VEX Robotics}
-            \resumeItem{Won 7 1st Place Awards for Events in TSA including Competitive Programming \& Software Design}
+            \resumeItem{Graduated with 4.66/4.0 GPA winning 32 Regional and 2
+            National Awards for AI Usage in VEX Robotics}
+            \resumeItem{Won 2 Worlds Titles and 7 1st Place Awards for Events
+                in TSA including ``Systems Design" \& ``Software Design"}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -142,19 +146,30 @@
       {Founder, Head of Operations}{Jun. 2020 -- Jul. 2021}
       {Loganov Data}{Atlanta, GA}
       \resumeItemListStart
-        \resumeItem{Developed rigorous mathematical models to analyze weather data to accurately determine supply/demand volatility for Natural Gas on the New York Mercantile Exchange (obtained 92\% accuracy)} 
-        \resumeItem{Communicated with vendors such as the National Weather Service and European Centre for Medium-Range Weather Forecasts to develop data ingestion pipelines to reduce latency to 3 minutes for twice daily satellite reports}
-        \resumeItem{Used cyclical mathematical processes to determine anomalized trends for Natural Gas}
-        \resumeItem{Utilized websockets and both a RESTful and GraphQL API to provide low-latency data to hundreds of end-users}
+        \resumeItem{Developed rigorous mathematical models to analyze weather
+        data to accurately determine supply/demand volatility for Natural Gas
+    on the New York Mercantile Exchange (obtained 92\% accuracy)} 
+        \resumeItem{Communicated with vendors such as the National Weather
+        Service and European Centre for Medium-Range Weather Forecasts to
+    develop data ingestion pipelines to reduce latency from 20 to 3 minutes for
+    twice daily satellite reports}
+        \resumeItem{
+            Interpolated anomalized trends for Natural Gas using cyclical
+            mathematical processes
+        }
+        \resumeItem{Provided reliable data with low-latency to hundreds of
+            end-users utilizing websocket and RESTful/GraphQL APIs}
       \resumeItemListEnd
 
     \resumeSubheading
       {President}{Apr. 2020 -- July 2020}
       {Code the Universe}{Kansas City, KS}
       \resumeItemListStart
-        \resumeItem{Managed a non-profit organization to provide learning resources to nearly 2,500 students}
+        \resumeItem{Managed a non-profit organization, with 30 direct reports,
+            to provide learning resources to nearly 2,500 students}
         \resumeItem{Developed course registrars (using match-making algorithms) to allow for class registration on a flexible basis}
-        \resumeItem{Streamlined existing infrastructure to simplify required oversight by management team}
+        \resumeItem{Streamlined existing infrastructure to simplify required
+        oversight by management team}
     \resumeItemListEnd
 
     \resumeSubheading
@@ -181,9 +196,13 @@
     %         \resumeItem{Exposed collected data using REST API and developed automatic data reporting to large campus communities, relied upon by over 4,000 students and performed data visualizations to capture the effect of COVID-19} 
     %       \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Open Exchange} $|$ \emph{OCaml, Financial Engineering, TCP/IP, NYSE FIX, Switching, Profiling}}{Dec. 2020}
+          {\textbf{Open Exchange} $|$ \emph{OCaml, TCP/IP, NYSE FIX, Switching, 
+                Profiling, Financial Engineering}}{Dec. 2020}
           \resumeItemListStart
-            \resumeItem{Developed an exchange/auction system using a classic book approach fully functional with TCP socket communication capable of handling market orders, bids, asks, and cancels using a parallel exchange fairy system}
+            \resumeItem{Developed a fully-fledged exchange/auction system using
+            a classic book approach accessible over TCP sockets
+        capable of handling market orders, bids, asks, and
+    cancels using a parallel exchange fairy system}
             \resumeItem{Implemented, optimized, and rigorously tested efficient data structures to reduce order matching/execution times to faster than the industry gold standard; documented process using benchmarking and a spreadsheet}
             \resumeItem{Practiced Jane Street best practices of developing low latency OCaml code, optimized/profiled with \mintinline{C}{ocamlprof}}
           \resumeItemListEnd
@@ -193,7 +212,7 @@
           \resumeItemListStart
             \resumeItem{Created a market data provisioner that streamed data from the CQG Futures ticker-tape to provide top-level quote data with sub-millisecond latency}
             \resumeItem{Logged and automatically analyzed quote and order book data to determine price level supply/demand hotspots}
-            \resumeItem{Consistently receives over one million data requests on a daily basis}
+            \resumeItem{Consistently received over one million data requests on a daily basis}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Flux} $|$ \emph{Go, Websockets, TravisCI, Git, TCP/IP, OAuth2}}{Jan. 2020}
