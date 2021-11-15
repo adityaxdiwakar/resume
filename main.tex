@@ -1,31 +1,14 @@
-\documentclass[letterpaper,11pt]{article}
-
+\documentclass[a4paper,12pt]{extarticle}
+\usepackage{geometry}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
-\usepackage{minted}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-%\usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-\usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -34,11 +17,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
 
 \urlstyle{same}
 
@@ -48,202 +31,168 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-\pdfgentounicode=1
+	\vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
 % Custom commands
+\newcommand{\resumeSkillItem}[2]{
+	\item\small{
+		\textbf{#1}{: #2 \vspace{-2pt}}
+	}
+}
+
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-3pt}}
-  }
+	\item\small{
+		#1 \vspace{-2pt}
+	}
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+	\item\small{
+		{\vspace{-2pt}}
+	}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-3pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+	\vspace{-1pt}\item
+		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+			\textbf{#1} & #2 \\
+			\textit{#3} & \textit{#4} \\
+		\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
+\newcommand{\resumeSubItem}[2]{\resumeSkillItem{#1}{#2}\vspace{-5pt}}
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,
-    label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-3pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-
-% start
-
+%-----------------------------
+%%%%%%	CV STARTS HERE	%%%%%%
 
 \begin{document}
 
-\vspace{-5pt}
-\begin{center}
-    \textbf{\Huge \scshape Aditya Diwakar} \\ \vspace{1pt}
-    \small +1 (470) 302-9648 $|$
-    \href{mailto:aditya@diwakar.io}{\underline{aditya@diwakar.io}} $|$ 
-    \href{https://linkedin.com/in/adityadiwakar}{\underline{linkedin.com/in/adityadiwakar}} $|$
-    \href{https://github.com/adityaxdiwakar}{\underline{github.com/adityaxdiwakar}}
-\end{center}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{{\LARGE Aditya Diwakar}} 
+		& 
+	\href{https://github.com/adityaxdiwakar}{github.com/adityaxdiwakar}\\
+	\href{mailto:aditya.diwakar@gatech.edu}{aditya.diwakar@gatech.edu}
+		&(470) 302-9648 \\
+\end{tabular*}
 
-\vspace{-10pt}
-
-%-----------EDUCATION-----------
+%-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Bachelor of Science, Double Major in Mathematics and Computer Science}{Aug. 2019 -- Dec. 2023}
-      \begin{itemize}[leftmargin=0.15in, rightmargin=1in, label={}]
-        \small{\item{
-                \textbf{Coursework:}{
-                    \textit{Machine Learning, 
-                        Stochastic Processes,
-                        Algorithm: Design \& Analysis}, 
-                    Numerical Analysis,
-                    Probability \& Statistics, Applied Combinatorics,
-                    Abstract Algebra
-           }
-        }}
-     \end{itemize}
-     
-     \vspace{-6pt} % remove some of the additional space between these education areas
-     
-    \resumeSubheading
-      {South Forsyth High School}{Cumming, GA}
-      {High School Diploma}{}
-      \resumeItemListStart
-            \resumeItem{Graduated with 4.66/4.0 GPA winning 32 Regional and 2
-            National Awards for AI Usage in VEX Robotics}
-            \resumeItem{Won 2 Worlds Titles and 7 1st Place Awards for Events
-                in TSA including ``Systems Design" \& ``Software Design"}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-\vspace{-9pt}
-
-%-----------EXPERIENCE-----------
+	\resumeSubHeadingListStart
+		\resumeSubheading
+			{Georgia Institute of Technology}{Atlanta, GA}
+			{Dual B.S. in Computer Science, Mathematics; Major GPA: 4.0}
+			{Aug 2019 - Dec 2023}
+			\vspace{-3pt}
+			{\scriptsize { \footnotesize{\newline{}\textbf{Concentration:}
+				Systems \& Architecture, Intelligence; Probability \& 
+				Statistics
+			}}}
+			{\scriptsize { \footnotesize{\newline{}\textbf{Courses:}
+				\textit{Machine Learning}, \textit{Stochastic Processes}, 
+				\textit{Algorithms: Design \& Analysis}, Numerical Analysis,
+				Probability \& Statistics, Combinatorics, Abstract Algebra
+			}}}
+	\resumeSubHeadingListEnd
+\vspace{-6mm}
 \section{Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Founder, Head of Operations}{Jun. 2020 -- Jul. 2021}
-      {Loganov Data}{Atlanta, GA}
-      \resumeItemListStart
-        \resumeItem{Developed rigorous mathematical models to analyze weather
-        data to accurately determine supply/demand volatility for Natural Gas
-    on the New York Mercantile Exchange (obtained 92\% accuracy)} 
-        \resumeItem{Communicated with vendors such as the National Weather
-        Service and European Centre for Medium-Range Weather Forecasts to
-    develop data ingestion pipelines to reduce latency from 20 to 3 minutes for
-    twice daily satellite reports}
-        \resumeItem{
-            Interpolated anomalized trends for Natural Gas using cyclical
-            mathematical processes
-        }
-        \resumeItem{Provided reliable data with low-latency to hundreds of
-            end-users utilizing websocket and RESTful/GraphQL APIs}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {President}{Apr. 2020 -- July 2020}
-      {Code the Universe}{Kansas City, KS}
-      \resumeItemListStart
-        \resumeItem{Managed a non-profit organization, with 30 direct reports,
-            to provide learning resources to nearly 2,500 students}
-        \resumeItem{Developed course registrars (using match-making algorithms) to allow for class registration on a flexible basis}
-        \resumeItem{Streamlined existing infrastructure to simplify required
-        oversight by management team}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {VP of Technical Operations}{Oct. 2018 -- July 2019}
-      {NetVPX Hosting LLC}{Boston, MA}
-      \resumeItemListStart
-        \resumeItem{Managed client onboarding and technical support operations to ensure sub-hour ticket response times}
-        \resumeItem{Offered and handled SLA negotiations to provide reliable systems with 99.97\% uptime}
-        \resumeItem{In charge of proof-of-concepts for developing custom hosting provisioning software and additional product SKUs}
-        \resumeItem{Streamlined protocols to mitigate downtime, yielded consistent resolution of outages within 10 minutes}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-
-\vspace{-6pt}
-
-%-----------PROJECTS-----------
+	\resumeSubHeadingListStart
+		\resumeSubheading{Loganov Data}{Remote}
+		{Operations/Research Head, Founder}{Jun 2020 - Jul 2021}
+		\resumeItemListStart
+			\resumeItem{Forecasted natural gas demand volatility with 92\%
+				accuracy through probabilistic/regressive models}
+			\resumeItem{Ingested weather vendor data 84\% faster than industry
+				standard with low-level parallel processing}
+			\resumeItem{Provided low-latency data reliably to hundreds of
+				end-users with RESTful \& GraphQL APIs}
+		\resumeItemListEnd
+		\resumeSubheading{Code the Universe}{Kansas City, KS}
+		{President, Board Member}{Apr 2020 - Jul 2020}
+		\resumeItemListStart
+			\resumeItem{Provided learning resources to $\sim$2,500
+				students while managing 30 direct reports}
+			\resumeItem{Rebuilt registration system with in-house course
+				registrars resulting in $100$\% increased registrations}
+			\resumeItem{Reduced redundant administrative oversight by 50\% by 
+				implementing robust policies and processes}
+		\resumeItemListEnd
+		\resumeSubheading{NetVPX Hosting LLC}{Boston, MA}
+		{VP of Technical Operations, CTO}{Apr 2020 - Jul 2020}
+		\resumeItemListStart
+			\resumeItem{Led initiative developing custom hosting provisioning
+				tools and additional product SKUs}
+			\resumeItem{Ensured $99.97$\% site reliability by maintaining
+				and signing SLA obligations}
+			\resumeItem{Recruited technical staff ensuring same hour ticket
+				response time and smooth onboardings}
+		\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-5mm}
 \section{Projects}
-    \resumeSubHeadingListStart
-    %   \resumeProjectHeading
-    %       {\textbf{GT Jackets Protect Jackets Tracking} $|$ \emph{Go, Redis, PostgreSQL, Cron}}{Aug. 2020 -- Present}
-    %       \resumeItemListStart
-    %         \resumeItem{Began to collect case data reported by Georgia Tech's Health department using webscrapers}
-    %         \resumeItem{Exposed collected data using REST API and developed automatic data reporting to large campus communities, relied upon by over 4,000 students and performed data visualizations to capture the effect of COVID-19} 
-    %       \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Open Exchange} $|$ \emph{OCaml, TCP/IP, NYSE FIX, Switching, 
-                Profiling, Financial Engineering}}{Dec. 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a fully-fledged exchange/auction system using
-            a classic book approach accessible over TCP sockets
-        capable of handling market orders, bids, asks, and
-    cancels using a parallel exchange fairy system}
-            \resumeItem{Implemented, optimized, and rigorously tested efficient data structures to reduce order matching/execution times to faster than the industry gold standard; documented process using benchmarking and a spreadsheet}
-            \resumeItem{Practiced Jane Street best practices of developing low latency OCaml code, optimized/profiled with \mintinline{C}{ocamlprof}}
-          \resumeItemListEnd
-    
-      \resumeProjectHeading
-          {\textbf{Blueberry} $|$ \emph{Go, PostgreSQL, Redis, Docker, Websockets, REST API}}{Sep. 2019}
-          \resumeItemListStart
-            \resumeItem{Created a market data provisioner that streamed data from the CQG Futures ticker-tape to provide top-level quote data with sub-millisecond latency}
-            \resumeItem{Logged and automatically analyzed quote and order book data to determine price level supply/demand hotspots}
-            \resumeItem{Consistently received over one million data requests on a daily basis}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Flux} $|$ \emph{Go, Websockets, TravisCI, Git, TCP/IP, OAuth2}}{Jan. 2020}
-          \resumeItemListStart
-            \resumeItem{Provided a Golang Library for the TDAmeritrade Data Socket to expose endpoints for developers to retrieve quote, chart and option series data on an ad-hoc basis}
-            \resumeItem{Distributed library binaries with insurance for reliability by integrating fail-safe protocols for client disconnects}
-            \resumeItem{Used extensively in multiple projects from other developers as a reliable way to get data from financial markets}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-\vspace{-5pt}
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: OCaml, Go, Python, C/C++, SQL, Rust, Java} \\
-     %\textbf{Frameworks}{: Mux, Tokio, Rocket.rs, React, Flask}\\
-     \textbf{Developer Tools}{: AWS, Git, Docker, TravisCI, CI/CD, Kubernetes, GCP, Vim, Sentry, Nginx, Caddy} \\
-     \textbf{Infrastructure}{: Routing/Switching, Load Balancing, Proxying, Delivery Networks, Matching Engines}\\
-     \textbf{Mathematics}{: Stochastic Modeling, Hypothesis Testing, Numerical Analysis, Brownian Motion, Differential Equations}\\
-     \textbf{Finance}{: Volatility, Options, Futures, Arbitrage, Slippage Backtesting, Binomial Pricing, Commodity Markets}
-    }}
- \end{itemize}
-
-
-%-------------------------------------------
+	\resumeSubHeadingListStart
+		\resumeSubheading{Open Exchange $|$ 
+		{\normalfont \small \textit 
+		{OCaml, TCP/IP, NYSE FIX, Switching/Routing}}}
+		{Dec 2020}{}{}\\[-10pt]
+		\resumeItemListStart
+			\resumeItem{Implemented exchange suite with OCaml and NYSE
+				FIX protocol supporting many order types}
+			\resumeItem{Outperformed gold standard performance by profiling
+				data structure designs with \texttt{ocamlprof}}
+			\resumeItem{Integrated versatile reliability into design with 
+				usage of passive matching engines, cancel fairies, etc.}
+		\resumeItemListEnd
+		\resumeSubheading{Flux $|$ 
+		{\normalfont \small \textit 
+		{Go, Websockets, State Machines, OAuth2}}}
+		{Jan 2020}{}{}\\[-10pt]
+		\resumeItemListStart
+			\resumeItem{Provided a developer friendly API to communicate with
+				TDAmeritrade data provisioner}
+			\resumeItem{Built translation units converting streamed message
+				data into a requester/receiver data model}
+			\resumeItem{Used actively in many projects requiring critical
+				access to quote, chart, and option chain data}
+			\resumeItem{Tested to $100$\% code coverage with unit tests 
+				run automatically in Continuous Integration workflow}
+		\resumeItemListEnd
+		\resumeSubheading{Blueberry $|$ 
+		{\normalfont \small \textit 
+		{Go, Websockets, PostgreSQL, Redis, Docker, RESTful}}}
+		{Jan 2020}{}{}\\[-10pt]
+		\resumeItemListStart
+			\resumeItem{Exposed CQG Futures data socket 
+			feed providing versatile low-latency top-level quote access}
+			\resumeItem{Consumed by endusers through any of:
+			RESTful \& GraphQL APIs, TCP, UDP, or Web sockets}
+			\resumeItem{Built with performace in mind; capable of handling
+			millions of message distributions daily}
+		\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-5mm}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+		\resumeSubItem{Languages}
+			{~~~~~~Go, Python, Java, C/C++, OCaml, Rust, SQL}
+		\resumeSubItem{Tools}
+			{~~~~~~~~~~~~~~Kubernetes, Docker, CI/CD, Sentry, Kafka, Nginx,
+			Caddy}
+		\resumeSubItem{Infrastructure}
+			{~Routing/Switching, Load Balancing, Proxying, Delivery Networks,
+			 Matching Engines}
+		\resumeSubItem{Finance}
+			{~~~~~~~~~~~Futures, Options, Stochastics, Hypothesis Testing,
+			Commodities, Volatility}
+	\resumeSubHeadingListEnd
 \end{document}
