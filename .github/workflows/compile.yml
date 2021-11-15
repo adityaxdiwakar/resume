@@ -27,8 +27,8 @@ jobs:
           remote_key: ${{ secrets.DEPLOY_KEY }}
     deploy_main:
       using: "composite"
-      steps:
       if: github.ref == 'refs/heads/master'
+      steps:
       - name: Deploy PDF
         uses: burnett01/rsync-deployments@5.1
         with:
