@@ -2,7 +2,6 @@ name: Compile and Deploy
 on: [push]
 jobs:
   build:
-    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git Repo
@@ -12,6 +11,24 @@ jobs:
         with:
           root_file: main.tex
           latexmk_shell_escape: true
+    deploy_hash:
+      using: "composite"
+      steps:
+      - name: Get Short SHA
+        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+      - name: Deploy PDF
+        uses: burnett01/rsync-deployments@5.1
+        with:
+          switches: -av --progress
+          path: ./main.pdf
+          remote_path: /var/www/html/u/resume/${SHORT_SHA}.pdf
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+    deploy_main:
+      using: "composite"
+      steps:
+      if: github.ref == 'refs/heads/master'
       - name: Deploy PDF
         uses: burnett01/rsync-deployments@5.1
         with:
