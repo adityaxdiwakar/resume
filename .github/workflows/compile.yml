@@ -12,7 +12,7 @@ jobs:
           root_file: main.tex
           latexmk_shell_escape: true
   deploy_hash:
-    using: "composite"
+    needs: build
     steps:
     - name: Get Short SHA
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
@@ -26,7 +26,7 @@ jobs:
         remote_user: ${{ secrets.REMOTE_USER }}
         remote_key: ${{ secrets.DEPLOY_KEY }}
   deploy_main:
-    using: "composite"
+    needs: build
     if: github.ref == 'refs/heads/master'
     steps:
     - name: Deploy PDF
