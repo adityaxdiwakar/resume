@@ -13,6 +13,7 @@ jobs:
           latexmk_shell_escape: true
   deploy_hash:
     needs: build
+    runs-on: ubuntu-latest
     steps:
     - name: Get Short SHA
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
@@ -27,6 +28,7 @@ jobs:
         remote_key: ${{ secrets.DEPLOY_KEY }}
   deploy_main:
     needs: build
+    runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
     - name: Deploy PDF
