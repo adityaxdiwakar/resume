@@ -64,7 +64,7 @@
 }
 
 
-\newcommand{\resumeSubItem}[2]{\resumeSkillItem{#1}{#2}\vspace{-3pt}}
+\newcommand{\resumeSubItem}[2]{\resumeSkillItem{#1}{#2}\vspace{-5pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -92,38 +92,27 @@
 	\resumeSubHeadingListStart
 		\resumeSubheading
 			{Georgia Institute of Technology}{Atlanta, GA}
-			{Dual Bachelor of Scicence - Computer Science and Mathematics}
+			{Dual B.S. in Computer Science, Mathematics; Major GPA: 4.0}
 			{Aug 2019 - Dec 2023}
+			\vspace{-3pt}
+			{\scriptsize { \footnotesize{\newline{}\textbf{Concentration:}
+				Systems \& Architecture, Intelligence; Probability \& 
+				Statistics
+			}}}
 			{\scriptsize { \footnotesize{\newline{}\textbf{Courses:}
 				\textit{Machine Learning}, \textit{Stochastic Processes}, 
 				\textit{Algorithms: Design \& Analysis}, Numerical Analysis,
 				Probability \& Statistics, Combinatorics, Abstract Algebra
 			}}}
-		\resumeSubHeadingListEnd
-		
-\section{Skills Summary}
-	\resumeSubHeadingListStart
-	\resumeSubItem{Languages}
-		{~~~~~~Go, Python, Java, C/C++, OCaml, Rust, SQL}
-	\resumeSubItem{Tools}
-		{~~~~~~~~~~~~~~Kubernetes, Docker, CI/CD, Sentry, Kafka, Nginx, Caddy}
-	\resumeSubItem{Infrastructure}
-		{~Routing/Switching, Load Balancing, Proxying, Delivery Networks,
-		 Matching Engines}
-	\resumeSubItem{Finance}
-		{~~~~~~~~~~~Futures, Options, Stochastics, Hypothesis Testing, Commodities,
-		 Volatility}
-		
-
-\resumeSubHeadingListEnd
-\vspace{-5pt}
+	\resumeSubHeadingListEnd
+\vspace{-6mm}
 \section{Experience}
 	\resumeSubHeadingListStart
 		\resumeSubheading{Loganov Data}{Remote}
 		{Operations/Research Head, Founder}{Jun 2020 - Jul 2021}
 		\resumeItemListStart
-			\resumeItem{Forecasted Natural Gas demand volatility with 92\%
-				accuracy thru probabilistic/regressive models}
+			\resumeItem{Forecasted natural gas demand volatility with 92\%
+				accuracy through probabilistic/regressive models}
 			\resumeItem{Ingested weather vendor data 84\% faster than industry
 				standard with low-level parallel processing}
 			\resumeItem{Provided low-latency data reliably to hundreds of
@@ -134,22 +123,77 @@
 		\resumeItemListStart
 			\resumeItem{Provided learning resources to $\sim$2,500
 				students while managing 30 direct reports}
-			\resumeItem{Rebuilt registration system with in-house flexible
-				course registrars resulting in $2$x registrations}
-			\resumeItem{Implemented robust policies and processes reducing
-				required administrative oversight by 50\%}
+			\resumeItem{Rebuilt registration system with in-house course
+				registrars resulting in $100$\% increased registrations}
+			\resumeItem{Reduced redundant administrative oversight by 50\% by 
+				implementing robust policies and processes}
 		\resumeItemListEnd
 		\resumeSubheading{NetVPX Hosting LLC}{Boston, MA}
-		{President, Board Member}{Apr 2020 - Jul 2020}
+		{VP of Technical Operations, CTO}{Apr 2020 - Jul 2020}
 		\resumeItemListStart
 			\resumeItem{Led initiative developing custom hosting provisioning
 				tools and additional product SKUs}
-			\resumeItem{Maintained and signed SLA obligations ensuring
-				site reliability of $99.97$\%}
+			\resumeItem{Ensured $99.97$\% site reliability by maintaining
+				and signing SLA obligations}
 			\resumeItem{Recruited technical staff ensuring same hour ticket
 				response time and smooth onboardings}
 		\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
+	\resumeSubHeadingListEnd
+\vspace{-5mm}
+\section{Projects}
+	\resumeSubHeadingListStart
+		\resumeSubheading{Open Exchange $|$ 
+		{\normalfont \small \textit 
+		{OCaml, TCP/IP, NYSE FIX, Switching/Routing}}}
+		{Dec 2020}{}{}\\[-10pt]
+		\resumeItemListStart
+			\resumeItem{Implemented exchange suite with OCaml and NYSE
+				FIX protocol supporting many order types}
+			\resumeItem{Outperformed gold standard performance by profiling
+				data structure designs with \texttt{ocamlprof}}
+			\resumeItem{Integrated versatile reliability into design with 
+				usage of passive matching engines, cancel fairies, etc.}
+		\resumeItemListEnd
+		\resumeSubheading{Flux $|$ 
+		{\normalfont \small \textit 
+		{Go, Websockets, State Machines, OAuth2}}}
+		{Jan 2020}{}{}\\[-10pt]
+		\resumeItemListStart
+			\resumeItem{Provided a developer friendly API to communicate with
+				TDAmeritrade data provisioner}
+			\resumeItem{Built translation units converting streamed message
+				data into a requester/receiver data model}
+			\resumeItem{Used actively in many projects requiring critical
+				access to quote, chart, and option chain data}
+			\resumeItem{Tested to $100$\% code coverage with unit tests 
+				run automatically in Continuous Integration workflow}
+		\resumeItemListEnd
+		\resumeSubheading{Blueberry $|$ 
+		{\normalfont \small \textit 
+		{Go, Websockets, PostgreSQL, Redis, Docker, RESTful}}}
+		{Jan 2020}{}{}\\[-10pt]
+		\resumeItemListStart
+			\resumeItem{Exposed CQG Futures data socket 
+			feed providing versatile low-latency top-level quote access}
+			\resumeItem{Consumed by endusers through any of:
+			RESTful \& GraphQL APIs, TCP, UDP, or Web sockets}
+			\resumeItem{Built with performace in mind; capable of handling
+			millions of message distributions daily}
+		\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-5mm}
+\section{Skills Summary}
+	\resumeSubHeadingListStart
+		\resumeSubItem{Languages}
+			{~~~~~~Go, Python, Java, C/C++, OCaml, Rust, SQL}
+		\resumeSubItem{Tools}
+			{~~~~~~~~~~~~~~Kubernetes, Docker, CI/CD, Sentry, Kafka, Nginx,
+			Caddy}
+		\resumeSubItem{Infrastructure}
+			{~Routing/Switching, Load Balancing, Proxying, Delivery Networks,
+			 Matching Engines}
+		\resumeSubItem{Finance}
+			{~~~~~~~~~~~Futures, Options, Stochastics, Hypothesis Testing,
+			Commodities, Volatility}
+	\resumeSubHeadingListEnd
 \end{document}
