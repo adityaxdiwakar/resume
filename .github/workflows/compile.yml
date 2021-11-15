@@ -11,12 +11,21 @@ jobs:
         with:
           root_file: main.tex
           latexmk_shell_escape: true
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with: 
+          name: resume
+          path: main.pdf
   deploy_hash:
     needs: build
     runs-on: ubuntu-latest
     steps:
     - name: Get Short SHA
       run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+    - name: Download PDF
+      uses: actions/download-artifact@v2
+      with:
+          name: resume
     - name: Deploy PDF
       uses: burnett01/rsync-deployments@5.1
       with:
@@ -31,6 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
+    - name: Download PDF
+      uses: actions/download-artifact@v2
+      with:
+          name: resume
     - name: Deploy PDF
       uses: burnett01/rsync-deployments@5.1
       with:
