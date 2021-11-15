@@ -20,8 +20,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Get Short SHA
-      run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-7`" >> $GITHUB_ENV
     - name: Download PDF
       uses: actions/download-artifact@v2
       with:
@@ -31,7 +29,7 @@ jobs:
       with:
         switches: -av --progress
         path: ./main.pdf
-        remote_path: /var/www/html/u/resume/${SHORT_SHA}.pdf
+        remote_path: /var/www/html/u/resume/${GITHUB_SHA}.pdf
         remote_host: ${{ secrets.REMOTE_HOST }}
         remote_user: ${{ secrets.REMOTE_USER }}
         remote_key: ${{ secrets.DEPLOY_KEY }}
