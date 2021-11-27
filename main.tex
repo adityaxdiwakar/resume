@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{extarticle}
+\documentclass[a4paper,11pt]{extarticle}
 \usepackage{geometry}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -31,9 +31,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-	\vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
-
+	\vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 %-------------------------
 % Custom commands
 \newcommand{\resumeSkillItem}[2]{
@@ -59,7 +58,7 @@
 		\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
 			\textbf{#1} & #2 \\
 			\textit{#3} & \textit{#4} \\
-		\end{tabular*}\vspace{-5pt}
+		\end{tabular*}\vspace{-3pt}
 }
 
 
@@ -70,7 +69,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-3pt}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %-----------------------------
 %%%%%%	CV STARTS HERE	%%%%%%
@@ -104,12 +103,13 @@
 				Probability \& Statistics, Combinatorics, Abstract Algebra
 			}}}
 	\resumeSubHeadingListEnd
-\vspace{-6mm}
+
 \section{Experience}
 	\resumeSubHeadingListStart
 	\resumeSubheading{D.E. Shaw \& Co. -- Site Reliability Engineering}
 		{New York, NY}
 		{Incoming Software Engineering Intern}{May 2022 - Aug 2022}
+		\vspace{-1mm}
 		\resumeSubheading{Loganov Data}{Remote}
 		{Operations/Research Head, Founder}{Jun 2020 - Jul 2021}
 		\resumeItemListStart
@@ -127,7 +127,7 @@
 				students while managing 30 direct reports}
 			\resumeItem{Rebuilt registration system with in-house course
 				registrars resulting in $100$\% increased registrations}
-			\resumeItem{Reduced redundant administrative oversight by 50\% by 
+			\resumeItem{Reduced redundant administrative oversight by 50\% by
 				implementing robust policies and processes}
 		\resumeItemListEnd
 		\resumeSubheading{NetVPX Hosting LLC}{Boston, MA}
@@ -141,13 +141,23 @@
 				response time and smooth onboardings}
 		\resumeItemListEnd
 	\resumeSubHeadingListEnd
-\vspace{-5mm}
+
 \section{Projects}
 	\resumeSubHeadingListStart
+		\resumeSubheading{OCamLC-3 $|$ 
+		{\normalfont \small \textit 
+		{OCaml, Assembly, LC-3, Regex, PL Theory}}}
+		{\textit{Nov 2021}}{}{}\\[-12pt]
+		\resumeItemListStart
+			\resumeItem{Developed assembler for LC-3 Assembly with custom
+			lexing, parsing, and composition}
+			\resumeItem{Implemented command-line interface with interactive
+			views for each step of assembly}
+		\resumeItemListEnd
 		\resumeSubheading{Open Exchange $|$ 
 		{\normalfont \small \textit 
 		{OCaml, TCP/IP, NYSE FIX, Switching/Routing}}}
-		{\textit{Dec 2020}}{}{}\\[-10pt]
+		{\textit{Dec 2020}}{}{}\\[-12pt]
 		\resumeItemListStart
 			\resumeItem{Implemented exchange suite with OCaml and NYSE
 				FIX protocol supporting many order types}
@@ -159,43 +169,41 @@
 		\resumeSubheading{Flux $|$ 
 		{\normalfont \small \textit 
 		{Go, Websockets, State Machines, OAuth2}}}
-		{\textit{Jan 2020}}{}{}\\[-10pt]
+		{\textit{Jan 2020}}{}{}\\[-12pt]
 		\resumeItemListStart
 			\resumeItem{Provided a developer friendly API to communicate with
 				TDAmeritrade data provisioner}
 			\resumeItem{Built translation units converting streamed message
 				data into a requester/receiver data model}
-			\resumeItem{Used actively in many projects requiring critical
-				access to quote, chart, and option chain data}
 			\resumeItem{Tested to $100$\% code coverage with unit tests 
 				run automatically in Continuous Integration workflow}
 		\resumeItemListEnd
 		\resumeSubheading{Blueberry $|$ 
 		{\normalfont \small \textit 
 		{Go, Websockets, PostgreSQL, Redis, Docker, RESTful}}}
-		{\textit{Jan 2020}}{}{}\\[-10pt]
+		{\textit{Jan 2020}}{}{}\\[-12pt]
 		\resumeItemListStart
-			\resumeItem{Exposed CQG Futures data socket 
-			feed providing versatile low-latency top-level quote access}
+			\resumeItem{Exposed CQG data feed providing high-throughput
+			low-latency top-level quote access}
 			\resumeItem{Consumed by endusers through any of:
 			RESTful \& GraphQL APIs, TCP, UDP, or Web sockets}
 			\resumeItem{Built with performace in mind; capable of handling
 			millions of message distributions daily}
 		\resumeItemListEnd
 	\resumeSubHeadingListEnd
-\vspace{-5mm}
+
 \section{Skills Summary}
 	\resumeSubHeadingListStart
 		\resumeSubItem{Languages}
-			{~~~~~~Go, Python, Java, C/C++, OCaml, Rust, SQL}
+			{\hspace{0.6mm}~~~~~~~Go, Python, Java, C/C++, OCaml, Rust, SQL}
 		\resumeSubItem{Tools}
-			{~~~~~~~~~~~~~~Kubernetes, Docker, CI/CD, Sentry, Kafka, Nginx,
-			Caddy}
+			{\hspace{0.3mm}~~~~~~~~~~~~~~~Kubernetes, Docker, CI/CD, Sentry,
+				Kafka, Nginx, Caddy}
 		\resumeSubItem{Infrastructure}
-			{~Routing/Switching, Load Balancing, Proxying, Delivery Networks,
+			{~~Routing/Switching, Load Balancing, Proxying, Delivery Networks,
 			 Matching Engines}
 		\resumeSubItem{Finance}
-			{~~~~~~~~~~~Futures, Options, Stochastics, Hypothesis Testing,
-			Commodities, Volatility}
+			{\hspace{0.7mm}~~~~~~~~~~~Futures, Options, Stochastics, Hypothesis
+				Testing, Commodities, Volatility}
 	\resumeSubHeadingListEnd
 \end{document}
