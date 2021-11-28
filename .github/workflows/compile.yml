@@ -14,7 +14,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with: 
-          name: resume
+          name: resume.pdf
           path: main.pdf
   deploy_hash:
     needs: build
@@ -23,7 +23,7 @@ jobs:
     - name: Download PDF
       uses: actions/download-artifact@v2
       with:
-          name: resume
+          name: resume.pdf
     - name: Deploy PDF
       uses: burnett01/rsync-deployments@5.1
       with:
@@ -41,7 +41,7 @@ jobs:
     - name: Download PDF
       uses: actions/download-artifact@v2
       with:
-          name: resume
+          name: resume.pdf
     - name: Deploy PDF
       uses: burnett01/rsync-deployments@5.1
       with:
