@@ -164,56 +164,38 @@
 		\resumeItemListEnd
 	\resumeSubHeadingListEnd
 
-
 \section{Projects}
-	\resumeSubHeadingListStart
-		\resumeSubheading{OCamLC-3 $|$ 
-		{\normalfont \small \textit 
-		{OCaml, Assembly, LC-3, Regex, PL Theory}}}
-		{\textit{Nov 2021}}{}{}\\[-12pt]
-		\resumeItemListStart
-			\resumeItem{Developed assembler for LC-3 Assembly with custom
-			lexing, parsing, and composition}
-			\resumeItem{Implemented command-line interface with interactive
-			views for each step of assembly}
-		\resumeItemListEnd
-		\resumeSubheading{Open Exchange $|$ 
-		{\normalfont \small \textit 
-		{OCaml, TCP/IP, NYSE FIX, Switching/Routing}}}
-		{\textit{Dec 2020}}{}{}\\[-12pt]
-		\resumeItemListStart
-			\resumeItem{Implemented exchange suite with OCaml and NYSE
-				FIX protocol supporting many order types}
-			\resumeItem{Outperformed gold standard performance by profiling
-				data structure designs with \texttt{ocamlprof}}
-			\resumeItem{Integrated versatile reliability into design with 
-				usage of passive matching engines, cancel fairies, etc.}
-		\resumeItemListEnd
-		\resumeSubheading{Flux $|$ 
-		{\normalfont \small \textit 
-		{Go, Websockets, State Machines, OAuth2}}}
-		{\textit{Jan 2020}}{}{}\\[-12pt]
-		\resumeItemListStart
-			\resumeItem{Provided a developer friendly API to communicate with
-				TDAmeritrade data provisioner}
-			\resumeItem{Built translation units converting streamed message
-				data into a requester/receiver data model}
-			\resumeItem{Tested to $100$\% code coverage with unit tests 
-				run automatically in Continuous Integration workflow}
-		\resumeItemListEnd
-		\resumeSubheading{Blueberry $|$ 
-		{\normalfont \small \textit 
-		{Go, Websockets, PostgreSQL, Redis, Docker, RESTful}}}
-		{\textit{Jan 2020}}{}{}\\[-12pt]
-		\resumeItemListStart
-			\resumeItem{Exposed CQG data feed providing high-throughput
-			low-latency top-level quote access}
-			\resumeItem{Consumed by endusers through any of:
-			RESTful \& GraphQL APIs, TCP, UDP, or Web sockets}
-			\resumeItem{Built with performace in mind; capable of handling
-			millions of message distributions daily}
-		\resumeItemListEnd
-	\resumeSubHeadingListEnd
+    \noindent
+    \begin{itemize}
+        \vspace{-1.5mm}
+        \item{\textbf{OCamLC-3:} Develoed assembler for LC-3 assembly with
+                cusom lexing, parsing, and assembling using OCaml and Regex.
+                Implemented CLI with partial outputs for lexed, parsed, and
+                assembled states.\
+        }
+        \vspace{-1mm}
+        \item{\textbf{Open Exchange:} Implemented exchange suite with OCaml 
+                and NYSE FIX protocol supporting multiple order types;
+                outperformed gold standard performance by profiling data
+                structure designs with \texttt{ocamlprof}. Designed with
+                versatility in mind using failsafe matching engines, cancel
+                fairies, etc.
+        }
+        \vspace{-1mm}
+        \item{\textbf{Flux:} Provided a developer friendly API to communicate
+                with TDAmeritrade data provisioner using Go, Websockets, and
+                a robust state machine. Built highly flexible translation units
+                converting streamed message data into a requester/receiver 
+                data model. Achieved 100\% tested code coverage.
+        }
+        \vspace{-1mm}
+        \item{\textbf{Blueberry:} Exposed CQG data feed providing
+            high-throughput low-latency top-level quote access. Consumed
+            by endusers through various means such as RESTful or GraphQL APIs,
+            or raw TCP/UDP sockets. Optimized for performance, capable of
+            millions of daily message distributions.
+        }
+    \end{itemize}
 
 \section{Skills Summary}
 	\resumeSubHeadingListStart
