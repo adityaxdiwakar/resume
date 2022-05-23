@@ -66,7 +66,8 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[leftmargin=0.15in,label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-3pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
@@ -80,8 +81,10 @@
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\textbf{{\LARGE Aditya Diwakar}} 
 		& 
-	\href{https://github.com/adityaxdiwakar}{github.com/adityaxdiwakar}\\
-	\href{mailto:aditya.diwakar@gatech.edu}{aditya.diwakar@gatech.edu}
+    \underline{\href{https://github.com/adityaxdiwakar}
+        {github.com/adityaxdiwakar}}\\
+	\underline{\href{mailto:aditya.diwakar@gatech.edu}
+        {aditya.diwakar@gatech.edu}}
 		&(470) 302-9648 \\
 \end{tabular*}
 
@@ -90,9 +93,9 @@
 	\resumeSubHeadingListStart
 		\resumeSubheading
 			{Georgia Institute of Technology}{Atlanta, GA}
-            {Dual B.S. in Computer Science \& Mathematics; 
-                GPA: 3.95, Major GPA: 4.0}
-			{Aug 2019 -- Dec 2023}
+            {Dual B.S. in Computer Science \& Mathematics, 
+                GPA: 3.95 / Major GPA: 4.0}
+			{Aug 2020 -- Dec 2023}
 			\vspace{-3pt}
 			{\scriptsize { \footnotesize{\newline{}\textbf{Dual Enrolled:}
                 2019 -- 2020 (Part-Time), 2020 -- 2021 (Full-Time)
@@ -140,7 +143,7 @@
 		\resumeSubheading
             {Loganov Data}
             {Remote}
-		    {Operations/Research Head, Founder}
+		    {Founder, Research Software Engineer}
             {Jun 2020 -- Jul 2021}
 		\resumeItemListStart
 			\resumeItem{Forecasted natural gas demand volatility with 92\%
@@ -222,8 +225,14 @@
 		\resumeSubItem{Infrastructure}
 			{~~Routing/Switching, Load Balancing, Proxying, Delivery Networks,
 			 Matching Engines}
+
+
+        \begin{comment}
 		\resumeSubItem{Finance}
 			{\hspace{0.7mm}~~~~~~~~~~~Futures, Options, Stochastics, Hypothesis
 				Testing, Commodities, Volatility}
+        \end{comment}
+
+
 	\resumeSubHeadingListEnd
 \end{document}
