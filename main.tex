@@ -1,5 +1,4 @@
 \documentclass[a4paper,11pt]{extarticle}
-\usepackage{geometry}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -9,19 +8,15 @@
 \usepackage{enumitem}
 \usepackage[hidelinks,pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{calc}
+\usepackage[top=0.7in, left=0.57in, right=0.57in]{geometry}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.530in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.45in}
-\addtolength{\textheight}{1in}
+\setlength{\textheight}{11in}
 
 \urlstyle{same}
 
@@ -43,7 +38,7 @@
 
 \newcommand{\resumeItem}[1]{
 	\item\small{
-		#1 \vspace{-2pt}
+		#1 \vspace{-1.2pt}
 	}
 }
 
@@ -54,13 +49,13 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-	\vspace{-1pt}\item
+	\vspace{-1pt}
+    \item
 		\begin{tabular*}{1\linewidth}{l@{\extracolsep{\fill}}r}
 			\textbf{#1} & #2 \\
 			\textit{#3} & \textit{#4} \\
-		\end{tabular*}\vspace{-3pt}
+		\end{tabular*}\vspace{-2pt}
 }
-
 
 \newcommand{\resumeSubItem}[2]{\resumeSkillItem{#1}{#2}\vspace{-5pt}}
 
@@ -74,7 +69,6 @@
 
 %-----------------------------
 %%%%%%	CV STARTS HERE	%%%%%%
-
 \begin{document}
 
 %----------HEADING-----------------
@@ -130,10 +124,8 @@
                 interact with Kerberos-secured host machines}
             \resumeItem{Built dial tone service to ensure product reliability during
             outages \& monthly releases leveraging Temporal.io}
-            \resumeItem{Incresaed automation workflow visibility by providing
+            \resumeItem{Increased automation workflow visibility by providing
                 Elasticsearch integration by default}
-            \resumeItem{Performed analysis on the cost of manual labor by interviewing
-                operations-burdened engineers}
 		\resumeItemListEnd
         \resumeSubheading
             {Georgia Institute of Technology}
@@ -161,7 +153,7 @@
 			\resumeItem{Forecasted natural gas demand volatility with 92\%
                 accuracy through probabilistic \& regressive models}
 			\resumeItem{Ingested weather vendor data 6x faster than industry
-				standard with low-level parallel processing}
+				standard through low-level parallel processing}
 			\resumeItem{Provided low-latency data reliably to hundreds of
 				end-users with RESTful \& GraphQL APIs}
 		\resumeItemListEnd
@@ -173,8 +165,10 @@
 		\resumeItemListStart
 			\resumeItem{Led initiatives to develop custom hosting provisioning
 				tools and additional product SKUs}
-			\resumeItem{Ensured $99.97$\% site reliability by maintaining
-				and signing SLA obligations}
+			\resumeItem{Ensured $99.97$\% site reliability SLA obligations
+                by deploying comprehensive monitoring suite}
+            \resumeItem{Provided core business insights to executives by
+                regularly generating itemized server expense reports}
 		\resumeItemListEnd
 	\resumeSubHeadingListEnd
 
@@ -183,30 +177,26 @@
     \begin{itemize}
         \vspace{-1.5mm}
         \item{\textbf{OCamLC-3:} Developed assembler for LC-3 assembly with
-                custom lexing, parsing, and assembling using OCaml and Regex.
-                Created CLI with outputs for lexed, parsed, and
-                assembled states.
+                custom lexing, parsing, and assembling. Created CLI with
+                outputs for lexed, parsed, and assembled states. Written
+                in OCaml.
         }
         \vspace{-1mm}
-        \item{\textbf{Open Exchange:} Implemented exchange suite with OCaml 
-                and NYSE FIX protocol supporting multiple order types;
-                outperformed gold standard performance by profiling data
-                structure designs with \texttt{ocamlprof}. Designed with
-                versatility in mind using failsafe matching engines, cancel
-                fairies, etc.
+        \item{\textbf{Open Exchange:} Implemented exchange in OCaml
+                supporting multiple order types; profiled \& optimized data
+                structures with \texttt{ocamlprof}. Supported redundant
+                matching engines \& cancel fairies.
         }
         \vspace{-1mm}
-        \item{\textbf{Flux:} Provided a developer friendly API to communicate
-                with TDAmeritrade data provisioner using Go, WebSockets, and
-                a robust state machine. Built highly flexible translation units
-                converting streamed message data into a requester/receiver 
-                data model. Achieved 100\% tested code coverage.
+        \item{\textbf{Flux:} Provided developer friendly Go SDK to communicate
+                with TDAmeritrade WebSocket data provider. Built model to
+                convert from subscription data model to requester/receiver
+                model. 
         }
         \vspace{-1mm}
         \item{\textbf{Blueberry:} Exposed CQG data feed providing
-            high-throughput low-latency top-level quote access. Consumed
-            by end-users through various means such as RESTful or GraphQL APIs,
-            or raw TCP/UDP sockets. Optimized for performance, capable of
+            low-latency top-level quote access. Consumed over a
+            myriad of platforms. Optimized for performance to provide
             millions of daily message distributions.
         }
     \end{itemize}
